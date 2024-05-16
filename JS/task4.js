@@ -5,15 +5,18 @@ function isPalindrome(num) {
 let number;
 
 while (true) {
-    number = parseInt(prompt('Введіть початкове число:'));
+    number = prompt('Введіть початкове число:');
+
+    if (number === null) {
+        break;
+    }
+
+    number = parseInt(number);
 
     if (!isNaN(number)) {
         break;
-    } else if (number === null) {
-        console.log("Введення скасовано.");
-        break; 
     } else {
-        console.log("Введено некоректне значення. Будь ласка, спробуйте ще раз.");
+        console.log("Введіть коректне число.");
     }
 }
 

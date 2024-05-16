@@ -3,15 +3,14 @@ let number;
 do {
     number = prompt('Введіть чотирицифрове натуральне число:');
     if (number === null) {
-        console.log('Введення скасовано.');
         break;
     }
 
     if (number.length !== 4 || isNaN(number)) {
-        console.log('Введені дані некоректні. Будь ласка, введіть чотирицифрове натуральне число.');
+        console.log("Введене значення не є чотирицифровим натуральним числом.");
     } else {
-        const stringWithoutMiddleDigits = number.charAt(0) + "__" + number.charAt(3);
-        console.log("Результат:", stringWithoutMiddleDigits);
+        const st = number.charAt(0) + "__" + number.charAt(3);
+        console.log("Результат:", st);
         break;
     }
 } while (true);
